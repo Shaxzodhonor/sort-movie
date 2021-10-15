@@ -70,16 +70,16 @@ const searchMovie = () => {
 var sortsFunc = function(asd) {
   if (elSortSelect.value == "az") {
     asd.sort(function(a, b){
-      var x = a.title; 
-      var y =  b.title;
+      var x = a.title.toLowerCase(); 
+      var y =  b.title.toLowerCase();
       if (x<y) {return -1}
       if (x>y) {return 1}
       return 0
     })
   } else if (elSortSelect.value == "za") {
     asd.sort(function(a, b){
-      var x = a.title; 
-      var y =  b.title;
+      var x = a.title.toLowerCase(); 
+      var y =  b.title.toLowerCase();
       if (x<y) {return 1}
       if (x>y) {return -1}
       return 0
@@ -100,7 +100,7 @@ var sortsFunc = function(asd) {
       if (x>y) {return 1}
       return 0
     })
-  } else if (elSortSelect.value == "year__desc") {
+  } else if (elSortSelect.value == "year_desc") {
     asd.sort(function(a, b){
       var x = a.year; 
       var y =  b.year;
