@@ -28,6 +28,10 @@ const getYoutubeVideoThumbnail = function (videoId) {
   return `http://i3.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 };
 
-
-
+// const getMovieList = function(movie){
+//   const entries = Object.entries(movie);
+//   return entries.reduce(function(acc, curr){
+//     return {...acc, [curr[0]]: curr[1], trailer: 'https://youtube.com/watch?v=' + movie.ytid}
+//   }, {});
+// };
 

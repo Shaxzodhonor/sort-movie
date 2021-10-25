@@ -21,7 +21,7 @@
     <div class="container-xl">
       <div class="row">
         <section class="col-md-4 mb-4">
-          <div class="container">
+          <div>
             <h2 class="visually-hidden">Movie search form</h2>
 
             <form class="js-search-form" action="https://echo.htmlacademy.ru" method="GET" autocomplete="false">
@@ -55,6 +55,9 @@
 
               <button class="btn btn-primary btn-block my-1" type="submit">Search</button>
             </form>
+            <div class="js-bookmark">
+              <ol class="list-unstyled js-bookmark-list"></ol>
+            </div>
           </div>
         </section>
 
@@ -68,9 +71,25 @@
       </div>
     </div>
   </main>
+  
+  <!-- MODAL -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title js-modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body js-modal-text">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>  
+    </div>
+  </div>
 
   <!-- TEMPLATES -->
-
   <!-- Search result template -->
   <template id="search-result-template">
     <li class="search-results__item movie col-sm-6 mb-4">
@@ -91,11 +110,18 @@
           <p class="card-text">
             <a class="movie-trailer-link" href="" target="_blank">Watch trailer</a>
           </p>
+            <button type="button" class="btn btn-primary js-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Launch demo modal
+            </button>
+
+            <button type="button" class="js-bookmark-button btn btn-dark">BOOKMARK</button>
+            
         </div>
       </div>
     </li>
   </template>
-
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/movies.js"></script>
   <script src="js/normalized-movies.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/scripts.js"></script>
